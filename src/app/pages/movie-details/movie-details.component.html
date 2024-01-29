@@ -1,0 +1,26 @@
+<div class="container mt-5 p-5">
+    <div class="row">
+        <div class="col-lg-2" *ngIf="resultMovie.poster_path">
+            <img src="http://image.tmdb.org/t/p/original/{{resultMovie.poster_path}}" alt="">  
+        </div>
+        <div class="col-lg-10 mt-5">
+            <h1 class="mt-2 mb-2">{{resultMovie.original_title}}</h1>
+            <p class="mt-2 mb-2">{{resultMovie.overview}}</p>
+
+            <div class="row">
+                <div class="col-lg-4" *ngFor="let cast of resultMovieCast">
+                    <div class="row mt-5">
+                        <div class="col-lg-4" *ngIf="cast.profile_path">
+                            <img src="http://image.tmdb.org/t/p/original/{{cast.profile_path}}" alt=""> 
+                        </div>
+                        <div class="col-lg-7">
+                            <h3>{{cast.original_name}}</h3>
+                            <p>{{cast.character}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+</div>
