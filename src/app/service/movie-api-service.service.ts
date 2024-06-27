@@ -9,8 +9,8 @@ export class MovieApiServiceService {
 
     
   constructor(private http:HttpClient) { }
-  baseUrl ="https://api.themoviedb.org/3";
-  api_key="1a1d3340cca70c5e30e1d9fe8e42946b"
+  baseUrl =process.env.baseUrl;
+  api_key=process.env.api_key;
 
   bannerapi = `${this.baseUrl}/trending/all/week?api_key=${this.api_key}`
 
